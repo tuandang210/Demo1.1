@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    compile group: 'org.springframework', name: 'spring-core', version: '5.3.2'
+    compile group: 'org.springframework', name: 'spring-context', version: '5.3.2'
+    compile group: 'org.springframework', name: 'spring-beans', version: '5.3.2'
+    compile group: 'org.springframework', name: 'spring-web', version: '5.3.2'
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '5.3.2'
+    compile group: 'org.thymeleaf', name: 'thymeleaf-spring5', version: '3.0.11.RELEASE'
+    compile group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect', version: '2.5.2'
+//    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.3.0.Final'
+//    compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.3.0.Final'
+    compile group: 'org.springframework', name: 'spring-orm', version: '5.3.2'
+//    compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.4.2'
+    implementation group: 'org.mybatis', name: 'mybatis-spring', version: '2.0.6'
+    implementation group: 'com.oracle.database.jdbc', name: 'ojdbc8', version: '21.1.0.0'
+    implementation group: 'org.mybatis', name: 'mybatis', version: '3.5.6'
+    implementation group: 'org.springframework', name: 'spring-jdbc', version: '5.3.8'
+    implementation group: 'com.h2database', name: 'h2', version: '1.4.197'
+    implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.3'
+
+    implementation group: 'org.webjars.bower', name: 'jquery', version: '3.6.0'
+    implementation group: 'org.webjars', name: 'jquery-ui', version: '1.12.1'
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.8.5'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
