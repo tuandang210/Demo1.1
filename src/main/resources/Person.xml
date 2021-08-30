@@ -1,19 +1,24 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.mapper.PersonMapper">
+<mapper namespace="com.repository.PersonMapper">
     <insert id="insertPerson" parameterType="Person">
         INSERT INTO PERSON (ID, NAME, IDENTITYCARD, WARD, DISTRICT)
         VALUES (#{id}, #{name}, #{identityCard}, #{ward}, #{district})
     </insert>
 
-    <!--    <update id="updateStudent" parameterType="Student">-->
-    <!--        UPDATE STUDENT SET EMAIL = #{email}, NAME = #{name}, BRANCH = #{branch}, PERCENTAGE = #{percentage}, PHONE = #{phone} WHERE ID = #{id};-->
-    <!--    </update>-->
+    <update id="updatePerson" parameterType="Person">
+        UPDATE Person
+        SET name         = #{name},
+            identityCard = #{identityCard},
+            ward         = #{ward},
+            dictrict     = #{dictrict}
+        WHERE ID = #{id}
+    </update>
 
-    <!--    <delete id="deleteStudentById" parameterType="int">-->
-    <!--        DELETE from STUDENT WHERE ID = #{id};-->
-    <!--    </delete>-->
+        <delete id="deletePersonById" parameterType="int">
+            DELETE from PERSON WHERE ID = #{id}
+        </delete>
 
     <select id="selectAllPerson" resultMap="result">
         SELECT *

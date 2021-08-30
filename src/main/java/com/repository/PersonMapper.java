@@ -1,4 +1,4 @@
-package com.mapper;
+package com.repository;
 
 import com.model.Person;
 import com.model.StringDto;
@@ -10,7 +10,11 @@ public interface PersonMapper {
 
     Person selectPersonById(Long personId);
 
-    Person insertPerson(Person person);
+    void insertPerson(Person person);
+
+    Person updatePerson(Person person);
 
     List<Person> findPersonByName(StringDto stringDto);
+
+    void deletePersonById(Long id);
 }

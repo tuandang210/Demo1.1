@@ -11,8 +11,12 @@ public interface IPersonService {
 
     Person selectPersonById(Long personId);
 
-    Person insertPerson(Person person);
+    void insertPerson(Person person);
+
+    Person updatePerson(Person person);
 
     List<Person> findPersonByName(StringDto stringDto);
+
+    void deletePersonById(Long id);
 
 }

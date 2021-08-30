@@ -14,7 +14,7 @@ public class PersonController {
     @Autowired
     private IPersonService personService;
 
-    @GetMapping("/people")
+    @GetMapping("/")
     public ModelAndView showList() {
         Iterable<Person> people = personService.selectAllPerson();
         return new ModelAndView("/index", "people", people);

@@ -1,7 +1,7 @@
 package com.configuration;
 
 
-import com.mapper.PersonMapper;
+import com.repository.PersonMapper;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.springframework.beans.BeansException;
